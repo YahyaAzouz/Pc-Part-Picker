@@ -1,0 +1,285 @@
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #f0f0f0;
+    --accent-color: #ff0000;
+    --text-color: #333333;
+    --text-secondary: #666666;
+    --border-color: #cccccc;
+    --hover-color: #e0e0e0;
+}
+
+/* Dark Mode Styles */
+body.light-theme {
+    --primary-color: #1a1a1a; /* Dark background */
+    --secondary-color: #2a2a2a; /* Slightly lighter dark for elements */
+    --accent-color: #ff0000; /* Red (can remain the same or adjusted if needed) */
+    --text-color: #ffffff; /* White text */
+    --text-secondary: #b3b3b3; /* Light gray for secondary text */
+    --border-color: #333333; /* Dark gray border */
+    --hover-color: #3a3a3a; /* Darker hover effect */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--secondary-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo h1 {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background-color: var(--hover-color);
+}
+
+.nav-actions button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-actions button:hover {
+    background-color: var(--hover-color);
+}
+
+.login-btn, .register-link {
+    background-color: var(--accent-color);
+    color: var(--primary-color) !important;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: opacity 0.3s;
+    text-align: center;
+    text-decoration: none !important;
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+}
+
+.login-btn:hover, .register-link:hover {
+    opacity: 0.9;
+    color: var(--primary-color) !important;
+    text-decoration: none !important;
+}
+
+/* Main Content Styles */
+.build-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.parts-list, .build-summary {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.part-categories {
+    margin-top: 1rem;
+}
+
+.part-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+.part-item:hover {
+    transform: translateX(5px);
+}
+
+.part-item i {
+    margin-right: 1rem;
+    color: var(--accent-color);
+}
+
+.part-item span {
+    flex-grow: 1;
+}
+
+.add-part {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.add-part:hover {
+    opacity: 0.9;
+}
+
+/* Build Summary Styles */
+.compatibility-check, .price-summary {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+.compatibility-status {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.compatibility-status i {
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+}
+
+.total-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.price {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.save-build {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
+}
+
+.save-build:hover {
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .build-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+/* Modern Login Form Styles */
+.modern-auth {
+    max-width: 400px;
+    margin: 60px auto 0 auto;
+    padding: 2.5rem 2rem 2rem 2rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.08), 0 1.5px 6px rgba(0,0,0,0.04);
+    text-align: center;
+}
+
+.modern-auth h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #222;
+    font-weight: 700;
+}
+
+.modern-form .form-group {
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.modern-form label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.modern-form input[type="text"],
+.modern-form input[type="email"],
+.modern-form input[type="password"] {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    transition: border 0.2s;
+    box-sizing: border-box;
+}
+
+.modern-form input[type="text"]:focus,
+.modern-form input[type="email"]:focus,
+.modern-form input[type="password"]:focus {
+    border: 1.5px solid #007bff;
+    outline: none;
+    background: #fff;
+}
+
+.modern-btn {
+    width: 100%;
+    padding: 0.8rem 0;
+    background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+}
+
+.modern-btn:hover {
+    background: linear-gradient(90deg, #0056b3 0%, #007bff 100%);
+} 
